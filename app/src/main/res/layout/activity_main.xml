@@ -7,25 +7,31 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
-    <truongtd.com.alarmapp.ViewTimerBox
+    <truongtd.com.alarmapp.XTimerBox
         android:id="@+id/timerBegin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:label="Bedtime"
+        app:layout_constraintEnd_toStartOf="@id/timerEnd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/timerEnd"
         app:time="23:00" />
 
-    <truongtd.com.alarmapp.ViewTimerBox
+    <truongtd.com.alarmapp.XTimerBox
         android:id="@+id/timerEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         app:label="Wake up"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/timerBegin"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:time="05:30" />
+
+    <truongtd.com.alarmapp.XSelectDateButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timerBegin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

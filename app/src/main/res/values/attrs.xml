@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="ViewTimerBox">
+    <declare-styleable name="XTimerBox">
         <attr name="label" format="string"/>
         <attr name="time" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="XSelectDateButton">
+        <attr name="dateName" format="string"/>
     </declare-styleable>
 </resources>
