@@ -15,7 +15,8 @@ class XSelectDateButton: FrameLayout {
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         setWillNotDraw(false)
         context.obtainStyledAttributes(attrs, R.styleable.XSelectDateButton).let {
-            binding.tvDayOfWeek.text 
+            binding.tvDayOfWeek.text = it.getString(R.styleable.XSelectDateButton_dateName)
+            it.recycle()
         }
     }
 
@@ -58,7 +59,7 @@ class XSelectDateButton: FrameLayout {
 
         val circleX = (widthLayout / 2).toFloat().roundToOneDecimal()
         val circleY = (heightLayout / 2).toFloat().roundToOneDecimal()
-        val circleR = 36F
+        val circleR = 32F
 
         canvas?.apply {
             drawCircle(

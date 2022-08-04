@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
@@ -28,10 +29,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:time="05:30" />
 
-    <truongtd.com.alarmapp.XSelectDateButton
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDayOfWeek"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/timerBegin" />
+        app:layout_constraintTop_toBottomOf="@id/timerBegin"
+        app:spanCount="7"
+        tools:listitem="@layout/item_day_of_week" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Setup"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
